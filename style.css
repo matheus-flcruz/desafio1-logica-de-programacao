@@ -1,10 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: VT323, Arial, sans-serif;
+}
+
 body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
-    }
-    input, button {
-      padding: 10px;
-      margin: 10px;
-      border-radius: 10px;
-    }
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(45deg, #0F4C5C, #5F0F40, #800200);
+}
+
+h1 {
+  font-family: "Press Start 2P";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+input {
+  font-size: 2rem;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+button {
+  height: 52px;
+  cursor: pointer;
+  padding: 0 32px;
+  margin: 20px;
+  border-radius: 25px;
+  font-size: 2rem;
+  border: none;
+}
+
+#resultado {
+  font-size: 2rem;
+  margin-top: 20px;
+}
