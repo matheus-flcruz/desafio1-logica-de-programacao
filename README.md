@@ -25,3 +25,7 @@ Crie uma variável para armazenar o nome e a quantidade de experiência (XP) de 
 Ao final deve se exibir uma mensagem:
 
 "O Herói de nome **{nome}** está no nivel de **{nivel}**."
+
+## Observações
+
+Após finalizar o desafio, desenvolvi uma interface com HTML e CSS para o Classificador de Nível de Herói. Com o apoio do ChatGPT, consegui implementar recursos que ainda não havia aprendido, como o uso de funções e a integração do JavaScript ao HTML.
