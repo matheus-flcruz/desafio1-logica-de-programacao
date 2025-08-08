@@ -14,13 +14,30 @@
 
 * {
   font-family: VT323, Arial, sans-serif;
+  --bg-gradient: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+  --cor-primaria: #00ff99;
+  --cor-secundaria: #a3a3a3;
+  --cor-terciaria: #8A2BE2;
 }
 
 body {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(45deg, #0F4C5C, #5F0F40, #800200);
+  background: var(--bg-gradient);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  color: var(--cor-primaria);
 }
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+}
+
 
 h1 {
   font-family: "Press Start 2P";
@@ -35,6 +52,15 @@ input {
   margin: 15px;
   border-radius: 10px;
   background: transparent;
+  color: var(--cor-secundaria);
+  border: 2px solid var(--cor-secundaria);
+  transition: 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 10px var(--cor-primaria);
 }
 
 button {
@@ -45,9 +71,51 @@ button {
   border-radius: 25px;
   font-size: 2rem;
   border: none;
+  background: var(--cor-primaria);
+}
+
+button:hover {
+  background: var(--cor-terciaria);
+  background-position: 100%;
+  transform: scale(1.05);
+  color: #fff;
+  transition: background 1s, outline 1s, transform 1s;
 }
 
 #resultado {
   font-size: 2rem;
   margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: var(--cor-secundaria);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input, button, #resultado {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
 }

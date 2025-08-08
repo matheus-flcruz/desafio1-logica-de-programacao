@@ -29,4 +29,7 @@ function classificarHeroi() {
 
   document.getElementById('resultado').textContent =
     `O Herói de nome ${nome} está no nível de ${nivel}.`;
+
+  document.getElementById('resultado').style.animation = 'fadeIn 0.5s ease-in-out';
+
 }
